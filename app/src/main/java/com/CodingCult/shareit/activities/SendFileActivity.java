@@ -22,7 +22,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.MarcosDiez.shareviahttp.activities;
+package com.CodingCult.shareit.activities;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -32,8 +32,8 @@ import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Button;
 
-import com.MarcosDiez.shareviahttp.R;
-import com.MarcosDiez.shareviahttp.UriInterpretation;
+import com.CodingCult.shareit.R;
+import com.CodingCult.shareit.UriInterpretation;
 
 import java.io.File;
 import java.net.URLDecoder;

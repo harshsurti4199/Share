@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Share via HTTP</string>
+    <string name="app_name">ShareIt</string>
 
     <string name="standard_url" translatable="false">http://127.0.0.1/</string>
 

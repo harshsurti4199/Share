@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="dark_blue">#2980b9</color>
-    <color name="darker_blue">#20638f</color>
-    <color name="light_blue">#e8eaf6</color>
-    <color name="orange">#FF9800</color>
-    <color name="lighter_orange">#ffad33</color>
+    <color name="dark_blue">#F44336</color>
+    <color name="darker_blue">#97190E</color>
+    <color name="light_blue">#FFFFFF</color>
+    <color name="orange">#FFFFFF</color>
+    <color name="lighter_orange">#FFFFFF</color>
 </resources>

@@ -37,11 +37,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  * @version 1.0
  */
 
-package com.MarcosDiez.shareviahttp;
+package com.CodingCult.shareit;
 
 import android.util.Log;
 
-import com.MarcosDiez.shareviahttp.activities.BaseActivity;
+import com.CodingCult.shareit.activities.BaseActivity;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;

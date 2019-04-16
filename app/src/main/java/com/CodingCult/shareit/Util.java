@@ -23,7 +23,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
 
-package com.MarcosDiez.shareviahttp;
+package com.CodingCult.shareit;
 
 public class Util {
     public static String myLogName = "ShareViaHttp";

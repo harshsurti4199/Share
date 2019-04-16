@@ -1,4 +1,4 @@
-package com.MarcosDiez.shareviahttp.activities;
+package com.CodingCult.shareit.activities;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -9,9 +9,9 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 
-import com.MarcosDiez.shareviahttp.BuildConfig;
-import com.MarcosDiez.shareviahttp.R;
-import com.MarcosDiez.shareviahttp.UriInterpretation;
+import com.CodingCult.shareit.BuildConfig;
+import com.CodingCult.shareit.R;
+import com.CodingCult.shareit.UriInterpretation;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package com.MarcosDiez.shareviahttp.views;
+package com.CodingCult.shareit.views;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.MarcosDiez.shareviahttp.R;
+import com.CodingCult.shareit.R;
 
 public class FloatingActionButtonWithText extends RelativeLayout {
 

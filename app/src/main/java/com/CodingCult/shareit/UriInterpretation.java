@@ -3,7 +3,7 @@
  * APACHE 2.0 License.
  *
  */
-package com.MarcosDiez.shareviahttp;
+package com.CodingCult.shareit;
 
 import android.content.ContentResolver;
 import android.database.Cursor;

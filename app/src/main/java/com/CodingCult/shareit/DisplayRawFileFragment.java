@@ -1,4 +1,4 @@
-package com.MarcosDiez.shareviahttp;
+package com.CodingCult.shareit;
 
 import android.app.AlertDialog;
 import android.app.Dialog;

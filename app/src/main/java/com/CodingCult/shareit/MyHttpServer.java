@@ -22,13 +22,13 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.MarcosDiez.shareviahttp;
+package com.CodingCult.shareit;
 
 //package webs;
 
 import android.util.Log;
 
-import com.MarcosDiez.shareviahttp.activities.BaseActivity;
+import com.CodingCult.shareit.activities.BaseActivity;
 
 import java.io.IOException;
 import java.net.Inet6Address;

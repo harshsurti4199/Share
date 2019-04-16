@@ -1,4 +1,4 @@
-package com.MarcosDiez.shareviahttp.activities;
+package com.CodingCult.shareit.activities;
 
 import android.app.AlertDialog;
 import android.app.DialogFragment;
@@ -24,11 +24,11 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.MarcosDiez.shareviahttp.BuildConfig;
-import com.MarcosDiez.shareviahttp.DisplayRawFileFragment;
-import com.MarcosDiez.shareviahttp.MyHttpServer;
-import com.MarcosDiez.shareviahttp.R;
-import com.MarcosDiez.shareviahttp.UriInterpretation;
+import com.CodingCult.shareit.BuildConfig;
+import com.CodingCult.shareit.DisplayRawFileFragment;
+import com.CodingCult.shareit.MyHttpServer;
+import com.CodingCult.shareit.R;
+import com.CodingCult.shareit.UriInterpretation;
 
 import java.util.ArrayList;
 
@@ -219,7 +219,7 @@ public class BaseActivity extends AppCompatActivity {
 
     private void showPrivacyPolicy() {
         DialogFragment newFragment = DisplayRawFileFragment.newInstance(getString(R.string.privacy_policy), R.raw.privacy_policy);
-        newFragment.show(getFragmentManager(), "dialog");
+        //newFragment.show(getFragmentManager(), "dialog");
     }
 
 
