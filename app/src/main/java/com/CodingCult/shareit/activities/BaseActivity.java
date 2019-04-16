@@ -33,7 +33,11 @@ import com.CodingCult.shareit.UriInterpretation;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -82,16 +86,28 @@ public class BaseActivity extends AppCompatActivity {
                         //Snackbar.make(findViewById(android.R.id.content), msg2, Snackbar.LENGTH_LONG).show();
                         //Log.d("BaseActivity","DONE");
                         String and_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
+
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
                         DatabaseReference myRef = database.getReference("history/"+and_id);
 
                         TextView text123 = (TextView) findViewById(R.id.uriPath);
                         String uploadtext;
+
+//                        int time = (int) (System.currentTimeMillis());
+//                        Timestamp tsTemp = new Timestamp(time);
+//                        String ts = tsTemp.toString();
+
+
+                        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+
+                        Log.d("Time Zone",timestamp.toString());
+
                         uploadtext= uriPath.getText().toString();
                         if (flag==0)
-                        {myRef.push().setValue(uploadtext);
+                        {myRef.push().setValue(uploadtext+"             "+timestamp.toString());
                             flag = 1;
                         }
+
                         //Log.d("Base",uploadtext);
                         break;
                     default:
@@ -201,9 +217,6 @@ public class BaseActivity extends AppCompatActivity {
         uriPath.setText(output.toString());
 
 //        Firebase here
-
-
-
 
     }
 

@@ -42,29 +42,10 @@ import java.util.Enumeration;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Title: A simple Webserver Tutorial NO warranty, NO guarantee, MAY DO damage
- * to FILES, SOFTWARE, HARDWARE!! Description: This is a simple tutorial on
- * making a webserver posted on http://turtlemeat.com . Go there to read the
- * tutorial! This program and sourcecode is free for all, and you can copy and
- * modify it as you like, but you should give credit and maybe a link to
- * turtlemeat.com, you know R-E-S-P-E-C-T. You gotta respect the work that has
- * been put down.
- * <p>
- * Copyright: Copyright (c) 2002 Company: TurtleMeat
- *
- * @version 1.0
- * @author: Jon Berg <jon.berg[on_server]turtlemeat.com
- */
 
-// file: server.java
-// the real (http) serverclass
-// it extends thread so the server is run in a different
-// thread than the gui, that is to make it responsive.
-// it's really just a macho coding thing.
 public class MyHttpServer extends Thread {
 
-    // by design, we only serve one file at a time.
+
 
     private static final ExecutorService threadPool = Executors.newCachedThreadPool();
     private static int port;
@@ -73,13 +54,7 @@ public class MyHttpServer extends Thread {
     private static BaseActivity launcherActivity = null;
     private boolean webserverLoop = true;
 
-//    // default port is 80
-//    public MyHttpServer(int listen_port) {
-//        port = listen_port;
-//        if (serverSocket == null) {
-//            this.start();
-//        }
-//    }
+
 
     // default port is 80
     public MyHttpServer(int listen_port){
@@ -250,38 +225,6 @@ public class MyHttpServer extends Thread {
         Log.d(Util.myLogName, s2);
     }
 
-	/*
-     * // TODO.... // ./iptables_armv5 -t nat -A PREROUTING -p tcp -m tcp
-	 * --dport 80 -j REDIRECT --to-ports 9999 // so we could "bind" port 80 on a
-	 * rooted android device...
-	 *
-	 * public boolean rootBind() { boolean retval = false; Process suProcess;
-	 *
-	 * try { suProcess = Runtime.getRuntime().exec("su");
-	 *
-	 * DataOutputStream os = new DataOutputStream(suProcess.getOutputStream());
-	 * DataInputStream osRes = new DataInputStream(suProcess.getInputStream());
-	 *
-	 * if (null != os && null != osRes) { // Getting the id of the current user
-	 * to check if this is root os.writeBytes("id\n"); os.flush();
-	 *
-	 * String currUid = osRes.readLine(); boolean exitSu = false; if (null ==
-	 * currUid) { retval = false; exitSu = false; Log.d("ROOT",
-	 * "Can't get root access or denied by user"); } else if (true ==
-	 * currUid.contains("uid=0")) { // retval = true; exitSu = true;
-	 * Log.d("ROOT", "Root access granted"); retval = normalBind(80); } else {
-	 * retval = false; exitSu = true; Log.d("ROOT", "Root access rejected: " +
-	 * currUid); }
-	 *
-	 * if (exitSu) { os.writeBytes("exit\n"); os.flush(); } } } catch (Exception
-	 * e) { // Can't get root ! // Probably broken pipe exception on trying to
-	 * write to output // stream after su failed, meaning that the device is not
-	 * rooted
-	 *
-	 * retval = false; Log.d("ROOT", "Root access rejected [" +
-	 * e.getClass().getName() + "] : " + e.getMessage()); }
-	 *
-	 * return retval; }
-	 */
+
 
 }

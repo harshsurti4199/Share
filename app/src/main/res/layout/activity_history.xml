@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.HistoryActivity">
+    tools:context=".activities.HistoryActivity"
+    android:orientation="vertical">
 
 
-    
+    <TextView
+        android:id="@+id/histories"
+        android:textSize="20dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        />
 
 </LinearLayout>
