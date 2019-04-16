@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
+import android.provider.Settings;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -62,6 +63,7 @@ public class BaseActivity extends AppCompatActivity {
         mHandler.handleMessage(mHandler.obtainMessage(BaseActivity.HANDLER_CONNECTION_END, ipAddress));
     }
 
+    public int flag = 0;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,19 +75,24 @@ public class BaseActivity extends AppCompatActivity {
                     case HANDLER_CONNECTION_START:
                         String msg = String.format(getString(R.string.connected_ip), (String) inputMessage.obj);
                         Snackbar.make(findViewById(android.R.id.content), msg, Snackbar.LENGTH_LONG).show();
+                        flag = 0;
                         break;
                     case HANDLER_CONNECTION_END:
                         String msg2 = String.format(getString(R.string.disconnected_ip), (String) inputMessage.obj);
                         //Snackbar.make(findViewById(android.R.id.content), msg2, Snackbar.LENGTH_LONG).show();
                         //Log.d("BaseActivity","DONE");
+                        String and_id = Settings.Secure.getString(getContentResolver(), Settings.Secure.ANDROID_ID);
                         FirebaseDatabase database = FirebaseDatabase.getInstance();
-                        DatabaseReference myRef = database.getReference("history");
+                        DatabaseReference myRef = database.getReference("history/"+and_id);
 
                         TextView text123 = (TextView) findViewById(R.id.uriPath);
                         String uploadtext;
                         uploadtext= uriPath.getText().toString();
-                        myRef.setValue(uploadtext);
-                        Log.d("Base",uploadtext);
+                        if (flag==0)
+                        {myRef.push().setValue(uploadtext);
+                            flag = 1;
+                        }
+                        //Log.d("Base",uploadtext);
                         break;
                     default:
                         super.handleMessage(inputMessage);

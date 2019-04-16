@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.CodingCult.shareit.BuildConfig;
 import com.CodingCult.shareit.R;
@@ -62,7 +63,18 @@ public class MainActivity extends BaseActivity {
                 }
             }
         });
+        Button history = (Button) findViewById(R.id.historybutton);
+        history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MainActivity.this,HistoryActivity.class);
+                startActivity(intent);
+
+            }
+        });
     }
+
 
     private void setViewsVisible() {
         findViewById(R.id.link_layout).setVisibility(View.VISIBLE);

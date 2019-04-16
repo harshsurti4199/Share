@@ -26,6 +26,18 @@
             android:layout_margin="50dp"
             android:src="@drawable/ic_pick_files" />
 
+        <Button
+            android:id="@+id/historybutton"
+            android:text="History"
+            android:background="#FF0000"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_items"
+            android:layout_marginLeft="150dp"
+            />
+
         <ScrollView
             android:id="@+id/scrolling_information"
             android:layout_width="match_parent"
