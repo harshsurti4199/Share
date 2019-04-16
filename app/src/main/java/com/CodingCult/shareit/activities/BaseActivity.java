@@ -29,6 +29,8 @@ import com.CodingCult.shareit.DisplayRawFileFragment;
 import com.CodingCult.shareit.MyHttpServer;
 import com.CodingCult.shareit.R;
 import com.CodingCult.shareit.UriInterpretation;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -74,7 +76,16 @@ public class BaseActivity extends AppCompatActivity {
                         break;
                     case HANDLER_CONNECTION_END:
                         String msg2 = String.format(getString(R.string.disconnected_ip), (String) inputMessage.obj);
-                        Snackbar.make(findViewById(android.R.id.content), msg2, Snackbar.LENGTH_LONG).show();
+                        //Snackbar.make(findViewById(android.R.id.content), msg2, Snackbar.LENGTH_LONG).show();
+                        //Log.d("BaseActivity","DONE");
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        DatabaseReference myRef = database.getReference("history");
+
+                        TextView text123 = (TextView) findViewById(R.id.uriPath);
+                        String uploadtext;
+                        uploadtext= uriPath.getText().toString();
+                        myRef.setValue(uploadtext);
+                        Log.d("Base",uploadtext);
                         break;
                     default:
                         super.handleMessage(inputMessage);
@@ -181,6 +192,12 @@ public class BaseActivity extends AppCompatActivity {
             output.append(thisUriInterpretation.getPath());
         }
         uriPath.setText(output.toString());
+
+//        Firebase here
+
+
+
+
     }
 
     protected void initHttpServer(ArrayList<UriInterpretation> myUris) {
